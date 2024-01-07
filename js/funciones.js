@@ -3,7 +3,7 @@ export const referenciarElementosDom = () => {
   return {
     cop: document.querySelector("#cop"),
     dolar: document.querySelector("#dolar"),
-    euro: document.querySelector("#euro"),
+    euro: document.querySelector("#euro")
   };
 };
 
