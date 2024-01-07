@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #f7f8fa;
+  background-color: #e0e8f8;
   font-size: 1.5em;
 }
 
@@ -23,7 +23,6 @@ body {
   display: grid;
   max-width: 40%;
   height: auto;
-  /* border: 1px solid red; */
   margin: 20px auto;
 
   grid:
@@ -38,7 +37,7 @@ body {
 
 .caja {
   border-radius: 10px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
   background: #ffffff;
 }
 
