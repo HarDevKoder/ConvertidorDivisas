@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "miFuente";
+  src: url("../fuentes/openSans.ttf");
+}
+
+html {
+  font-size: 10px;
+  font-family: miFuente;
+}
+
+body {
+  background-color: #f7f8fa;
+  font-size: 1.5em;
+}
+
+.container {
+  display: grid;
+  max-width: 40%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin: 20px auto;
+
+  grid:
+    "logo     logo      logo" 150px
+    "cop      cop       cop" 100px
+    "dolar    dolar     dolar" 100px
+    "euro     euro      euro" 100px /
+    1fr 1fr 1fr;
+
+  gap: 15px;
+}
+
+.caja {
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+}
+
+.logo {
+  grid-area: logo;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  height: 20%;
+  font-size: 1.6em;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.imagen {
+  height: 70%;
+  width: auto;
+}
+
+.imagen img {
+  height: 100%;
+}
+
+.cop {
+  grid-area: cop;
+}
+.dolar {
+  grid-area: dolar;
+}
+.euro {
+  grid-area: euro;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    width: 90%;
+  }
+}
