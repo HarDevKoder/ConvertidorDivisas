@@ -41,6 +41,11 @@ body {
   background: azure;
 }
 
+/* Clase que resalta div seleccionado */
+.resaltado {
+  border: 2px solid blue;
+}
+
 .logo {
   grid-area: logo;
   display: flex;
