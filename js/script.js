@@ -16,3 +16,5 @@ const divs = [cop, dolar, euro];
 
 // Resalto la tarjeta selecconada
 resaltarTarjetas(divs);
+
+

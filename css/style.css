@@ -41,6 +41,10 @@ body {
   background: azure;
 }
 
+.caja > * {
+  border: 1px solid red;
+}
+
 /* Clase que resalta div seleccionado */
 .resaltado {
   border: 2px solid blue;
@@ -75,12 +79,48 @@ body {
 
 .cop {
   grid-area: cop;
+  display: flex;
 }
 .dolar {
   grid-area: dolar;
+  display: flex;
 }
 .euro {
   grid-area: euro;
+  display: flex;
+}
+
+.logoCard {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoCard img {
+  width: 100%;
+}
+
+.logoCard2 img {
+  width: 85%;
+}
+
+.logoCard3 img {
+  width: 87%;
+}
+
+.inputCard {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnCard {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
