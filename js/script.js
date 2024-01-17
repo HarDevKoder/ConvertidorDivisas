@@ -1,8 +1,11 @@
 // ----------------------------------------------------------------------------
 // IMPORTO FUNCIONES A UTILIZAR
 // ----------------------------------------------------------------------------
-import { referenciarElementosDom, resaltarTarjetas } from "./funciones.js";
-
+import {
+  referenciarElementosDom,
+  resaltarTarjetas,
+  detectarBotonCalculo,
+} from "./funciones.js";
 
 // ----------------------------------------------------------------------------
 // PROGRAMA PRINCIPAL
@@ -11,10 +14,12 @@ import { referenciarElementosDom, resaltarTarjetas } from "./funciones.js";
 // referencio elementos del DOM
 referenciarElementosDom();
 
-// Creo Array con las tarjetas (divs)
-const divs = [cop, dolar, euro];
+// // Creo Array con las tarjetas (divs)
+// const divs = [cop, dolar, euro];
 
 // Resalto la tarjeta selecconada
-resaltarTarjetas(divs);
+resaltarTarjetas();
 
+// Detecto el calculo que se desea realizar
+detectarBotonCalculo();
 

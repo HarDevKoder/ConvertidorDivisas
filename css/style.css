@@ -39,10 +39,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
   background: azure;
-}
-
-.caja > * {
-  border: 1px solid red;
+  padding: 3px;
 }
 
 /* Clase que resalta div seleccionado */
@@ -121,6 +118,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+input {
+  display: none;
+  padding: 10px;
+  border: none;
+  text-align: right;
+  background-color: transparent;
+  font-size: 1.5em;
+}
+
+input:focus {
+  border: none;
+  outline-color: transparent;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+}
+
+button img {
+  width: 80%;
+  height: 80%;
 }
 
 @media (max-width: 768px) {
