@@ -4,7 +4,7 @@
 import {
   referenciarElementosDom,
   resaltarTarjetas,
-  detectarBotonCalculo,
+  detectarEscrituraInput,
 } from "./funciones.js";
 
 // ----------------------------------------------------------------------------
@@ -14,14 +14,9 @@ import {
 // referencio elementos del DOM
 referenciarElementosDom();
 
-// // Creo Array con las tarjetas (divs)
-// const divs = [cop, dolar, euro];
-
 // Resalto la tarjeta selecconada
 resaltarTarjetas();
 
 // Detecto el calculo que se desea realizar
-detectarBotonCalculo();
-
-
-
+// detectarBotonCalculo();
+detectarEscrituraInput();

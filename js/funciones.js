@@ -34,9 +34,38 @@ export const resaltarTarjetas = () => {
   });
 };
 
-// Función que detecta el boton para calcular la divisa (cop, dolar, euro)
-export const detectarBotonCalculo = () => {
-  btnCop.addEventListener("click", () => {});
-  btnDolar.addEventListener("click", () => {});
-  btnEuro.addEventListener("click", () => {});
+// Funcion que extrae los valores de la API
+export async function obtenerDatos(url) {
+  const respuesta = await fetch(url);
+  const datos = await respuesta.json();
+  return datos;
+}
+
+// Función que detecta escritura en un input y muestra equivalencias en tiempo real
+export const detectarEscrituraInput = () => {
+  let [cop, dolar, euro] = [0, 0, 0];
+
+  inputCop.addEventListener("input", () => {
+    cop = Number(inputCop.value);
+    obtenerDatos("https://open.er-api.com/v6/latest/COP").then((datos) => {
+      inputDolar.value = Number((datos.rates.USD * cop).toFixed(2));
+      inputEuro.value = Number((datos.rates.EUR * cop).toFixed(2));
+    });
+  });
+
+  inputDolar.addEventListener("input", () => {
+    dolar = Number(inputDolar.value);
+    obtenerDatos("https://open.er-api.com/v6/latest/USD").then((datos) => {
+      inputCop.value = Number(datos.rates.COP * dolar).toFixed(2);
+      inputEuro.value = Number(datos.rates.EUR * dolar).toFixed(2);
+    });
+  });
+
+  inputEuro.addEventListener("input", () => {
+    euro = Number(inputEuro.value);
+    obtenerDatos("https://open.er-api.com/v6/latest/eur").then((datos) => {
+      inputCop.value = Number(datos.rates.COP * euro).toFixed(2);
+      inputDolar.value = Number(datos.rates.USD * euro).toFixed(2);
+    });
+  });
 };
