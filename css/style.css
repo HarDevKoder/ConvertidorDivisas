@@ -40,6 +40,8 @@ body {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
   background: azure;
   padding: 3px;
+  display: flex;
+  align-items: center;
 }
 
 /* Clase que resalta div seleccionado */
@@ -72,6 +74,11 @@ body {
 
 .imagen img {
   height: 100%;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .cop {
@@ -150,5 +157,25 @@ button img {
   .container {
     max-width: 90%;
     width: 90%;
+  }
+
+  .caja {
+    display: flex;
+    gap: 10px;
+  }
+
+  input {
+    padding: 10px;
+    border: none;
+    text-align: right;
+    background-color: transparent;
+    font-size: 1.5em;
+    width: 100%;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
   }
 }
