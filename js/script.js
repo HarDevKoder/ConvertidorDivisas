@@ -23,3 +23,5 @@ resaltarTarjetas();
 // Detecto el calculo que se desea realizar
 detectarBotonCalculo();
 
+
+

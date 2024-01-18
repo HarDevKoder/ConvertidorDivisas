@@ -20,22 +20,23 @@ export const resaltarTarjetas = () => {
       divs.forEach((div) => div.classList.remove("resaltado"));
       // Resalto el div actual
       div.classList.add("resaltado");
+      if (div.id === "cop") {
+        inputCop.style.display = "block";
+        inputCop.focus();
+      } else if (div.id === "dolar") {
+        inputDolar.style.display = "block";
+        inputDolar.focus();
+      } else {
+        inputEuro.style.display = "block";
+        inputEuro.focus();
+      }
     });
   });
 };
 
 // Función que detecta el boton para calcular la divisa (cop, dolar, euro)
 export const detectarBotonCalculo = () => {
-  btnCop.addEventListener("click", () => {
-    inputCop.style.display='block';
-    inputCop.focus();
-  });
-  btnDolar.addEventListener("click", () => {
-    inputDolar.style.display = "block";
-    inputDolar.focus();
-  });
-  btnEuro.addEventListener("click", () => {
-    inputEuro.style.display = "block";
-    inputEuro.focus();
-  });
+  btnCop.addEventListener("click", () => {});
+  btnDolar.addEventListener("click", () => {});
+  btnEuro.addEventListener("click", () => {});
 };
