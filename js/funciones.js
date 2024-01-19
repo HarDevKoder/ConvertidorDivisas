@@ -46,26 +46,26 @@ export const detectarEscrituraInput = () => {
   let [cop, dolar, euro] = [0, 0, 0];
 
   inputCop.addEventListener("input", () => {
-    cop = Number(inputCop.value);
+    cop = inputCop.value;
     obtenerDatos("https://open.er-api.com/v6/latest/COP").then((datos) => {
-      inputDolar.value = Number((datos.rates.USD * cop).toFixed(2));
-      inputEuro.value = Number((datos.rates.EUR * cop).toFixed(2));
+      inputDolar.value = (datos.rates.USD * cop).toFixed(2);
+      inputEuro.value = (datos.rates.EUR * cop).toFixed(2);
     });
   });
 
   inputDolar.addEventListener("input", () => {
-    dolar = Number(inputDolar.value);
+    dolar = inputDolar.value;
     obtenerDatos("https://open.er-api.com/v6/latest/USD").then((datos) => {
-      inputCop.value = Number(datos.rates.COP * dolar).toFixed(2);
-      inputEuro.value = Number(datos.rates.EUR * dolar).toFixed(2);
+      inputCop.value = (datos.rates.COP * dolar).toFixed(2);
+      inputEuro.value = (datos.rates.EUR * dolar).toFixed(2);
     });
   });
 
   inputEuro.addEventListener("input", () => {
-    euro = Number(inputEuro.value);
+    euro = inputEuro.value;
     obtenerDatos("https://open.er-api.com/v6/latest/eur").then((datos) => {
-      inputCop.value = Number(datos.rates.COP * euro).toFixed(2);
-      inputDolar.value = Number(datos.rates.USD * euro).toFixed(2);
+      inputCop.value = (datos.rates.COP * euro).toFixed(2);
+      inputDolar.value = (datos.rates.USD * euro).toFixed(2);
     });
   });
 };
