@@ -4,7 +4,7 @@
 import {
   referenciarElementosDom,
   resaltarTarjetas,
-  detectarEscrituraInput,
+  calcularValoresDivisas,
 } from "./funciones.js";
 
 // ----------------------------------------------------------------------------
@@ -17,6 +17,5 @@ referenciarElementosDom();
 // Resalto la tarjeta selecconada
 resaltarTarjetas();
 
-// Detecto el calculo que se desea realizar
-// detectarBotonCalculo();
-detectarEscrituraInput();
+// Realizar Calculos de divisas
+calcularValoresDivisas();
