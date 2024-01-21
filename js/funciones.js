@@ -98,7 +98,6 @@ export const calcularValoresDivisas = () => {
   // Cálculos para Ingreso de EUR
   inputEuro.addEventListener("input", () => {
     euro = inputEuro.value.replace(/[,]/g, "");
-    // let regex = /^[0-9.]+$/;
     let regex = /^[0-9.]+$/;
     if (regex.test(euro) || euro === "") {
       let euro2 = Number(euro);
