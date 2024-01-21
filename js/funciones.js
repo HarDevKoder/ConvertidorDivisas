@@ -48,8 +48,8 @@ export const calcularValoresDivisas = () => {
   // Cálculos para Ingreso de COP
   inputCop.addEventListener("input", () => {
     cop = inputCop.value.replace(/[,]/g, "");
-    let regex = /^[0-9]*$/;
-    if (regex.test(cop)) {
+    let regex = /^[0-9.]+$/;
+    if (regex.test(cop) || cop === "") {
       let cop2 = Number(cop);
       if (cop2 >= 1000) {
         cop2 = cop2.toLocaleString("en");
@@ -64,6 +64,8 @@ export const calcularValoresDivisas = () => {
     } else {
       alert("Entrada inválida. Por favor, ingresa solo números.");
       inputCop.value = "";
+      inputDolar.value = "";
+      inputEuro.value = "";
       inputCop.focus();
     }
   });
@@ -71,8 +73,8 @@ export const calcularValoresDivisas = () => {
   // Cálculos para Ingreso de USD
   inputDolar.addEventListener("input", () => {
     dolar = inputDolar.value.replace(/[,]/g, "");
-    let regex = /^[0-9]*$/;
-    if (regex.test(dolar)) {
+    let regex = /^[0-9.]+$/;
+    if (regex.test(dolar) || dolar === "") {
       let dolar2 = Number(dolar);
       if (dolar2 >= 1000) {
         dolar2 = dolar2.toLocaleString("en");
@@ -86,7 +88,9 @@ export const calcularValoresDivisas = () => {
       });
     } else {
       alert("Entrada inválida. Por favor, ingresa solo números.");
+      inputCop.value = "";
       inputDolar.value = "";
+      inputEuro.value = "";
       inputDolar.focus();
     }
   });
@@ -94,8 +98,9 @@ export const calcularValoresDivisas = () => {
   // Cálculos para Ingreso de EUR
   inputEuro.addEventListener("input", () => {
     euro = inputEuro.value.replace(/[,]/g, "");
-    let regex = /^[0-9]*$/;
-    if (regex.test(euro)) {
+    // let regex = /^[0-9.]+$/;
+    let regex = /^[0-9.]+$/;
+    if (regex.test(euro) || euro === "") {
       let euro2 = Number(euro);
       if (euro2 >= 1000) {
         euro2 = euro2.toLocaleString("en");
@@ -109,6 +114,8 @@ export const calcularValoresDivisas = () => {
       });
     } else {
       alert("Entrada inválida. Por favor, ingresa solo números.");
+      inputCop.value = "";
+      inputDolar.value = "";
       inputEuro.value = "";
       inputEuro.focus();
     }
