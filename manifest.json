@@ -1,0 +1,19 @@
+{
+  "name": "Convertidor de Divisas",
+  "short_name": "Divisas",
+  "description": "Bienvenid@s a Calculadora de divisas, App que actualiza el precio de las monedas mas importantes :)",
+  "background_color": "#e0e8f8",
+  "theme_color": "#193257",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "./",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "./imagenes/pwa/iconoMoneda.png",
+      "sizes": "1280x1280",
+      "type": "image/png"
+    }
+  ]
+}
