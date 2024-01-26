@@ -1,7 +1,9 @@
 //asignar un nombre y versión al cache
-const CACHE_NAME = "Divisas_Cache",
+const CACHE_NAME = "Cache_Divisas",
   urlsToCache = [
     "./",
+    "sw.js",
+    "manifest.json",
     "index.html",
     "css/normalize.css",
     "css/style.css",
@@ -9,9 +11,7 @@ const CACHE_NAME = "Divisas_Cache",
     "js/script.js",
     "imagenes/favicons/iconoMonedaCircle.png",
     "imagenes/pwa/iconoMoneda.png",
-    "fuentes/openSans.ttf",
-    "manifest.json",
-    "sw.js"
+    "fuentes/openSans.ttf"
   ];
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
