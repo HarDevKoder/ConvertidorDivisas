@@ -5,6 +5,7 @@ import {
   referenciarElementosDom,
   resaltarTarjetas,
   calcularValoresDivisas,
+  verificarServiceWorker,
 } from "./funciones.js";
 
 // ----------------------------------------------------------------------------
@@ -13,6 +14,9 @@ import {
 
 // referencio elementos del DOM
 referenciarElementosDom();
+
+// Verifico en consola si el navegador soporta service worker
+verificarServiceWorker();
 
 // Resalto la tarjeta selecconada
 resaltarTarjetas();
