@@ -11,7 +11,7 @@
   "lang": "es-MX",
   "icons": [
     {
-      "src": "./imagenes/pwa/iconoMoneda.png",
+      "src": "./imagenes/moneda1280.png",
       "sizes": "1280x1280",
       "type": "image/png"
     }

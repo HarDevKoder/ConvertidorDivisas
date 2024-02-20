@@ -5,12 +5,11 @@ const CACHE_NAME = "Cache_Divisas",
     "sw.js",
     "manifest.json",
     "index.html",
-    "css/normalize.css",
     "css/style.css",
     "js/funciones.js",
     "js/script.js",
-    "imagenes/favicons/iconoMonedaCircle.png",
-    "imagenes/pwa/iconoMoneda.png",
+    "imagenes/moneda1239.png",
+    "imagenes/moneda1280.png",
     "fuentes/openSans.ttf"
   ];
 
